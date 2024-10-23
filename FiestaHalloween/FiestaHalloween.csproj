@@ -159,6 +159,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -173,6 +174,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\halloween.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\what.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ghosts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\galley.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spiderr %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bruja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\squeletons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumbas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\murcielagos.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

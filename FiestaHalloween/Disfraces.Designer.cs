@@ -134,6 +134,7 @@
             this.Controls.Add(this.pcbDisfraz);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbxParticipantes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Disfraces";
             this.Text = "Disfraces";
             ((System.ComponentModel.ISupportInitialize)(this.pcbDisfraz)).EndInit();
