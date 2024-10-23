@@ -34,7 +34,7 @@
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnInicioSesion = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnIniciarSesionAdmin = new System.Windows.Forms.Button();
             this.btnRegistrarse = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -54,6 +54,10 @@
             this.label1.Location = new System.Drawing.Point(78, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 16);
+            this.label1.Location = new System.Drawing.Point(112, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
@@ -71,14 +75,14 @@
             // 
             this.txtUsuario.Location = new System.Drawing.Point(81, 98);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(160, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(121, 20);
             this.txtUsuario.TabIndex = 2;
             // 
             // txtContraseña
             // 
             this.txtContraseña.Location = new System.Drawing.Point(81, 176);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(160, 22);
+            this.txtContraseña.Size = new System.Drawing.Size(121, 20);
             this.txtContraseña.TabIndex = 3;
             // 
             // label3
@@ -95,35 +99,44 @@
             // 
             this.btnInicioSesion.Location = new System.Drawing.Point(99, 209);
             this.btnInicioSesion.Name = "btnInicioSesion";
-            this.btnInicioSesion.Size = new System.Drawing.Size(118, 23);
+            this.btnInicioSesion.Size = new System.Drawing.Size(88, 19);
             this.btnInicioSesion.TabIndex = 5;
             this.btnInicioSesion.Text = "Iniciar sesión";
             this.btnInicioSesion.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnIniciarSesionAdmin
             // 
-            this.button1.Location = new System.Drawing.Point(99, 298);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 50);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Iniciar sesión como admin";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnIniciarSesionAdmin.Location = new System.Drawing.Point(99, 298);
+            this.btnIniciarSesionAdmin.Name = "btnIniciarSesionAdmin";
+            this.btnIniciarSesionAdmin.Size = new System.Drawing.Size(118, 50);
+            this.btnIniciarSesionAdmin.TabIndex = 6;
+            this.btnIniciarSesionAdmin.Text = "Iniciar sesión como admin";
+            this.btnIniciarSesionAdmin.UseVisualStyleBackColor = true;
+            this.btnIniciarSesionAdmin.Click += new System.EventHandler(this.btnIniciarSesionAdmin_Click);
             // 
             // btnRegistrarse
             // 
             this.btnRegistrarse.Location = new System.Drawing.Point(99, 260);
+
+            
+            // 
+            // btnRegistrarse
+            // 
+            this.btnRegistrarse.Location = new System.Drawing.Point(128, 242);
+            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.Size = new System.Drawing.Size(118, 32);
+            this.btnRegistrarse.Size = new System.Drawing.Size(88, 26);
             this.btnRegistrarse.TabIndex = 9;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(99, 241);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 16);
+            this.label2.Size = new System.Drawing.Size(98, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "¿no tienes cuenta?";
             // 
@@ -131,7 +144,6 @@
             // 
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnRegistrarse);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnInicioSesion);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtContraseña);
@@ -178,12 +190,21 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FiestaHalloween.Properties.Resources.halloween;
             this.ClientSize = new System.Drawing.Size(545, 491);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnRegistrarse);
+            this.Controls.Add(this.btnIniciarSesionAdmin);
+            this.Controls.Add(this.btnInicioSesion);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.lblcontraseña);
+            this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -203,7 +224,7 @@
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnInicioSesion;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnIniciarSesionAdmin;
         private System.Windows.Forms.Button btnRegistrarse;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
