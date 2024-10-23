@@ -4,11 +4,11 @@ USE FiestaHalloween;
 
 CREATE TABLE Participantes(
     idParticipante INT PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(50) NOT NULL,
-    contrasena VARCHAR(50) NOT NULL,
-    disfraz VARCHAR(50) NOT NULL,
-    fotoDisfraz VARCHAR(255) NOT NULL,
-    codigoInvitacion VARCHAR(12)
+    nombre VARCHAR(50) NULL,
+    contrasena VARCHAR(50) NULL,
+    disfraz VARCHAR(50) NULL,
+    fotoDisfraz VARCHAR(255) NULL,
+    codigoInvitacion VARCHAR(12) NOT NULL
 );
 
 CREATE TABLE Puntuacion (
@@ -50,3 +50,9 @@ CREATE TABLE VisitaParada (
     FOREIGN KEY (id_parada) REFERENCES ParadaDulces(id_parada) ON DELETE CASCADE,
     FOREIGN KEY (id_dulce) REFERENCES tipoDulce(id_tipo) ON DELETE CASCADE
 );
+
+CREATE USER 'halloween_admin'@'localhost' IDENTIFIED BY 'halloweenAdmin3110';
+
+GRANT ALL PRIVILEGES ON FiestaHalloween.* TO 'halloween_admin'@'localhost';
+
+FLUSH PRIVILEGES;
