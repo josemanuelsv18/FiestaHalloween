@@ -37,36 +37,46 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnRegistrarse = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(149, 85);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(78, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 16);
+            this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
             // lblcontraseña
             // 
             this.lblcontraseña.AutoSize = true;
-            this.lblcontraseña.Location = new System.Drawing.Point(149, 165);
+            this.lblcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcontraseña.Location = new System.Drawing.Point(78, 147);
             this.lblcontraseña.Name = "lblcontraseña";
-            this.lblcontraseña.Size = new System.Drawing.Size(79, 16);
+            this.lblcontraseña.Size = new System.Drawing.Size(90, 16);
             this.lblcontraseña.TabIndex = 1;
             this.lblcontraseña.Text = "Contraseña:";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(152, 118);
+            this.txtUsuario.Location = new System.Drawing.Point(81, 98);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(160, 22);
             this.txtUsuario.TabIndex = 2;
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(152, 196);
+            this.txtContraseña.Location = new System.Drawing.Point(81, 176);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(160, 22);
             this.txtContraseña.TabIndex = 3;
@@ -74,16 +84,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(166, 40);
+            this.label3.Font = new System.Drawing.Font("Old English Text MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(95, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 20);
+            this.label3.Size = new System.Drawing.Size(122, 24);
             this.label3.TabIndex = 4;
             this.label3.Text = "Inicie sesión";
             // 
             // btnInicioSesion
             // 
-            this.btnInicioSesion.Location = new System.Drawing.Point(170, 238);
+            this.btnInicioSesion.Location = new System.Drawing.Point(99, 209);
             this.btnInicioSesion.Name = "btnInicioSesion";
             this.btnInicioSesion.Size = new System.Drawing.Size(118, 23);
             this.btnInicioSesion.TabIndex = 5;
@@ -92,7 +102,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(170, 336);
+            this.button1.Location = new System.Drawing.Point(99, 298);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 50);
             this.button1.TabIndex = 6;
@@ -101,7 +111,7 @@
             // 
             // btnRegistrarse
             // 
-            this.btnRegistrarse.Location = new System.Drawing.Point(170, 298);
+            this.btnRegistrarse.Location = new System.Drawing.Point(99, 260);
             this.btnRegistrarse.Name = "btnRegistrarse";
             this.btnRegistrarse.Size = new System.Drawing.Size(118, 32);
             this.btnRegistrarse.TabIndex = 9;
@@ -111,30 +121,77 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(170, 279);
+            this.label2.Location = new System.Drawing.Point(99, 241);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 16);
             this.label2.TabIndex = 10;
             this.label2.Text = "¿no tienes cuenta?";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnRegistrarse);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnInicioSesion);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtContraseña);
+            this.panel1.Controls.Add(this.txtUsuario);
+            this.panel1.Controls.Add(this.lblcontraseña);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Location = new System.Drawing.Point(110, 49);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(320, 420);
+            this.panel1.TabIndex = 11;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::FiestaHalloween.Properties.Resources.murcielagos;
+            this.pictureBox3.Location = new System.Drawing.Point(194, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(143, 95);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FiestaHalloween.Properties.Resources.spiderr__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(-97, -71);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(271, 334);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::FiestaHalloween.Properties.Resources.tumbas;
+            this.pictureBox2.Location = new System.Drawing.Point(-69, 246);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(460, 174);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 491);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnRegistrarse);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnInicioSesion);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.lblcontraseña);
-            this.Controls.Add(this.label1);
+            this.BackgroundImage = global::FiestaHalloween.Properties.Resources.halloween;
+            this.ClientSize = new System.Drawing.Size(545, 491);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -149,6 +206,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnRegistrarse;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 
