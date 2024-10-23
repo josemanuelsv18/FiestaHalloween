@@ -1,0 +1,112 @@
+Aquí tienes el texto organizado y más legible:
+
+---
+
+### Parcial: *Fiesta de Halloween - Gestión de Disfraces y Dulces*
+
+#### Descripción General:
+Desarrolla una aplicación en **Windows Forms con C#** que permita gestionar una fiesta de Halloween con los siguientes aspectos:
+
+1. **Puntuación y premiación** al mejor disfraz.
+2. **Paradas de dulces** que se agotan a medida que los participantes las visitan.
+3. Dos tipos de usuarios:
+   - **Administrador**: Invita a los clientes, rellena las paradas con dulces e inscribe a los participantes.
+   - **Cliente**: Se inscribe utilizando un código de invitación, establece su disfraz, visita las paradas para tomar dulces y da puntaje a los disfraces de otros participantes.
+
+La aplicación debe tener una **interfaz dinámica y divertida** con temática de Halloween. Las paradas se representarán con íconos de casitas de brujas repartidas por la pantalla en modo pantalla completa, creando un ambiente festivo y atractivo.
+
+---
+
+### Funcionalidades:
+
+#### 1. Roles de Usuarios:
+
+- **Administrador**:
+   - Invita a los clientes proporcionándoles un **código de invitación**.
+   - Registra participantes con nombre y contraseña.
+   - Crea y rellena las paradas de dulces, definiendo la cantidad inicial de dulces en cada parada.
+   
+- **Cliente**:
+   - Utiliza el **código de invitación** para registrarse, proporcionando nombre y contraseña.
+   - Establece su disfraz al momento de la inscripción y puede incluir una foto.
+   - Visita las paradas de dulces para tomar dulces. La cantidad disminuye cada vez que toma uno.
+   - Da puntaje a los disfraces de otros participantes (escala de 1 a 10).
+
+#### 2. Gestión de Dulces en Paradas:
+
+- Las **paradas de dulces** tienen una cantidad limitada de dulces. Cada vez que un cliente toma un dulce, la cantidad disminuye.
+- Si una parada se queda sin dulces, la **casita** se mostrará en blanco y negro, indicando que no hay más dulces.
+- Las paradas muestran la cantidad restante de dulces y el tipo de dulce disponible.
+
+#### 3. Registro y Puntuación de Disfraces:
+
+- Los **participantes** se inscriben con nombre, disfraz y foto.
+- Cada **cliente** puede ver la lista de disfraces y dar puntaje a los disfraces de los demás.
+- Los disfraces con mayor puntaje aparecerán en una **tabla de puntuaciones**.
+
+#### 4. Interfaz Dinámica y Divertida:
+
+- La interfaz debe ser atractiva y temática, utilizando íconos como casitas de brujas para representar las paradas de dulces.
+- Las paradas estarán distribuidas por la pantalla, creando un entorno interactivo.
+- La aplicación debe ejecutarse en **pantalla completa** para una experiencia inmersiva.
+
+#### 5. Uso de Audios:
+
+- **Sonidos Temáticos**: Se podrán reproducir audios como risas de brujas, pasos, gritos y música de Halloween para crear una atmósfera divertida. Estos audios deben integrarse con la interacción de las paradas de dulces y las puntuaciones de disfraces.
+
+---
+
+### Puntos Extras:
+
+- **Screamer (5 puntos extras)**: Se otorgarán puntos adicionales si logras asustar al profesor durante la presentación o demostración del proyecto. ¡Aprovecha la temática de Halloween para hacer la experiencia memorable y divertida!
+
+---
+
+### Requerimientos Técnicos:
+
+1. **Base de Datos**:
+   - Tabla para **participantes** que almacene el nombre, disfraz, código de invitación y foto.
+   - Tabla para **paradas de dulces** que registre la cantidad inicial, la cantidad restante y los tipos de dulces.
+   - Tabla para **puntuaciones**, donde se registren los puntajes dados a los disfraces.
+
+2. **Interfaz Gráfica**:
+   - **Ventanas para el Administrador**: Registro de participantes, gestión de paradas y envío de códigos de invitación.
+   - **Ventanas para el Cliente**: Registro con código de invitación, elección de disfraz, visitas a paradas y puntaje a disfraces.
+   - Uso de gráficos e íconos relacionados con Halloween para una atmósfera festiva.
+
+3. **Operaciones**:
+   - CRUD (Crear, Leer, Actualizar, Eliminar) para disfraces y paradas de dulces.
+   - Validación del **código de invitación** para registrar clientes.
+   - Actualización en tiempo real de la cantidad de dulces en cada parada.
+   - Cálculo automático de la **tabla de puntuaciones** basada en los puntajes otorgados.
+
+4. **Tabla de Puntuaciones**:
+   - Mostrar los disfraces con mayor puntaje en una tabla ordenada.
+   - Visualizar el **ganador** del concurso.
+
+---
+
+### Rúbrica de Evaluación:
+
+| Criterio                        | Descripción                                                                                   | Puntuación |
+|----------------------------------|-----------------------------------------------------------------------------------------------|------------|
+| **Gestión de Usuarios y Roles**  | Implementación correcta de roles (Administrador y Cliente).                                    | 15 puntos  |
+|                                  | Registro de clientes usando código de invitación y validación.                                 | 10 puntos  |
+|                                  | Inscripción y gestión de disfraces para cada cliente.                                          | 5 puntos   |
+| **Gestión de Dulces**            | Configuración y visualización correcta de las paradas de dulces.                               | 10 puntos  |
+|                                  | Gestión de cantidad inicial y disminución de dulces al tomarlos.                               | 10 puntos  |
+|                                  | Visualización de casitas en blanco y negro al quedarse sin dulces.                             | 5 puntos   |
+| **Registro y Puntuación de Disfraces** | Registro de participantes con nombre, disfraz y foto.                                        | 10 puntos  |
+|                                  | Funcionalidad para dar puntaje a los disfraces.                                                | 10 puntos  |
+|                                  | Generación y visualización de la tabla de puntuaciones.                                        | 5 puntos   |
+| **Interfaz Dinámica y Divertida** | Uso de gráficos e íconos relacionados con Halloween.                                           | 5 puntos   |
+|                                  | Implementación de pantalla completa con paradas de dulces.                                     | 5 puntos   |
+| **Funcionalidad General y Estabilidad** | La aplicación funciona sin errores.                                                         | 5 puntos   |
+|                                  | Cumplimiento de especificaciones y requisitos del proyecto.                                    | 5 puntos   |
+| **Puntos Extras**                | Implementación de la funcionalidad "Screamer".                                                | 5 puntos   |
+
+**Total: 100 puntos**
+
+--- 
+
+Este formato organiza mejor la información y mejora la legibilidad del contenido.
