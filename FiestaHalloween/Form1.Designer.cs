@@ -50,57 +50,37 @@
             // label1
             // 
             this.label1.AutoSize = true;
-<<<<<<< HEAD
-            this.label1.Location = new System.Drawing.Point(112, 69);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-=======
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(78, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 16);
->>>>>>> eae4b323163724e616e3e43babc2158b6d69b8f3
+            this.label1.Location = new System.Drawing.Point(112, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
             // lblcontraseña
             // 
             this.lblcontraseña.AutoSize = true;
-<<<<<<< HEAD
-            this.lblcontraseña.Location = new System.Drawing.Point(112, 134);
-            this.lblcontraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblcontraseña.Name = "lblcontraseña";
-            this.lblcontraseña.Size = new System.Drawing.Size(64, 13);
-=======
             this.lblcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcontraseña.Location = new System.Drawing.Point(78, 147);
             this.lblcontraseña.Name = "lblcontraseña";
             this.lblcontraseña.Size = new System.Drawing.Size(90, 16);
->>>>>>> eae4b323163724e616e3e43babc2158b6d69b8f3
             this.lblcontraseña.TabIndex = 1;
             this.lblcontraseña.Text = "Contraseña:";
             // 
             // txtUsuario
             // 
-<<<<<<< HEAD
-            this.txtUsuario.Location = new System.Drawing.Point(114, 96);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.txtUsuario.Location = new System.Drawing.Point(81, 98);
->>>>>>> eae4b323163724e616e3e43babc2158b6d69b8f3
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(121, 20);
             this.txtUsuario.TabIndex = 2;
             // 
             // txtContraseña
             // 
-<<<<<<< HEAD
-            this.txtContraseña.Location = new System.Drawing.Point(114, 159);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.txtContraseña.Location = new System.Drawing.Point(81, 176);
->>>>>>> eae4b323163724e616e3e43babc2158b6d69b8f3
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(121, 20);
             this.txtContraseña.TabIndex = 3;
@@ -108,29 +88,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-<<<<<<< HEAD
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(124, 32);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 17);
-=======
             this.label3.Font = new System.Drawing.Font("Old English Text MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(95, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 24);
->>>>>>> eae4b323163724e616e3e43babc2158b6d69b8f3
             this.label3.TabIndex = 4;
             this.label3.Text = "Inicie sesión";
             // 
             // btnInicioSesion
             // 
-<<<<<<< HEAD
-            this.btnInicioSesion.Location = new System.Drawing.Point(128, 193);
-            this.btnInicioSesion.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.btnInicioSesion.Location = new System.Drawing.Point(99, 209);
->>>>>>> eae4b323163724e616e3e43babc2158b6d69b8f3
             this.btnInicioSesion.Name = "btnInicioSesion";
             this.btnInicioSesion.Size = new System.Drawing.Size(88, 19);
             this.btnInicioSesion.TabIndex = 5;
@@ -139,11 +106,9 @@
             // 
             // btnIniciarSesionAdmin
             // 
-<<<<<<< HEAD
-            this.btnIniciarSesionAdmin.Location = new System.Drawing.Point(128, 273);
-            this.btnIniciarSesionAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnIniciarSesionAdmin.Location = new System.Drawing.Point(99, 298);
             this.btnIniciarSesionAdmin.Name = "btnIniciarSesionAdmin";
-            this.btnIniciarSesionAdmin.Size = new System.Drawing.Size(88, 41);
+            this.btnIniciarSesionAdmin.Size = new System.Drawing.Size(118, 50);
             this.btnIniciarSesionAdmin.TabIndex = 6;
             this.btnIniciarSesionAdmin.Text = "Iniciar sesión como admin";
             this.btnIniciarSesionAdmin.UseVisualStyleBackColor = true;
@@ -151,20 +116,14 @@
             // 
             // btnRegistrarse
             // 
-            this.btnRegistrarse.Location = new System.Drawing.Point(128, 242);
-            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.button1.Location = new System.Drawing.Point(99, 298);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 50);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Iniciar sesión como admin";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Location = new System.Drawing.Point(99, 260);
+
+            
             // 
             // btnRegistrarse
             // 
-            this.btnRegistrarse.Location = new System.Drawing.Point(99, 260);
->>>>>>> eae4b323163724e616e3e43babc2158b6d69b8f3
+            this.btnRegistrarse.Location = new System.Drawing.Point(128, 242);
+            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarse.Name = "btnRegistrarse";
             this.btnRegistrarse.Size = new System.Drawing.Size(88, 26);
             this.btnRegistrarse.TabIndex = 9;
@@ -175,12 +134,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-<<<<<<< HEAD
-            this.label2.Location = new System.Drawing.Point(124, 227);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-=======
             this.label2.Location = new System.Drawing.Point(99, 241);
->>>>>>> eae4b323163724e616e3e43babc2158b6d69b8f3
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 13);
             this.label2.TabIndex = 10;
@@ -190,7 +144,6 @@
             // 
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnRegistrarse);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnInicioSesion);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtContraseña);
@@ -239,8 +192,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(374, 399);
+            this.BackgroundImage = global::FiestaHalloween.Properties.Resources.halloween;
+            this.ClientSize = new System.Drawing.Size(545, 491);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.btnIniciarSesionAdmin);
@@ -250,13 +205,6 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblcontraseña);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.BackgroundImage = global::FiestaHalloween.Properties.Resources.halloween;
-            this.ClientSize = new System.Drawing.Size(545, 491);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
->>>>>>> eae4b323163724e616e3e43babc2158b6d69b8f3
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
