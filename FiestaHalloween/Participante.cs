@@ -11,8 +11,8 @@ namespace FiestaHalloween
     {
         public string nombre { get; set; }
         public string codigo { get; set; }
-        public string contrasena {  get; set; }
-        public string disfraz {  get; set; }
-        public string fotoDisfraz {  get; set; }
+        public string contrasena { get; set; }
+        public string disfraz { get; set; }
+        public string fotoDisfraz { get; set; }
     }
 }

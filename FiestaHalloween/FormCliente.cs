@@ -41,9 +41,10 @@ namespace FiestaHalloween
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            //Lista para almacenar los codigos de invitado validos
+            // Lista para almacenar los códigos de invitación válidos
             List<string> codigosInvitacion = new List<string>();
-            //Almacenar los datos proporcionados por el usuario en un objeto de participante
+
+            // Almacenar los datos proporcionados por el usuario en un objeto de participante
             Participante obj_participante = new Participante()
             {
                 nombre = txtNombre.Text,
@@ -52,12 +53,14 @@ namespace FiestaHalloween
                 disfraz = txtDisfraz.Text,
                 fotoDisfraz = rutaImagen.ToString(),
             };
-            //crear conexion con el servidor
+
+            // Crear conexión con el servidor
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
+
                     // Consulta inicial para obtener todos los códigos de invitación existentes
                     MySqlCommand cmd = new MySqlCommand("SELECT codigoInvitacion FROM Participantes", conn);
                     using (MySqlDataReader reader = cmd.ExecuteReader())
@@ -67,70 +70,68 @@ namespace FiestaHalloween
                             codigosInvitacion.Add(reader.GetString("codigoInvitacion"));
                         }
                     }
+
+                    // Si el código de invitación ingresado es válido
+                    if (codigosInvitacion.Contains(obj_participante.codigo))
+                    {
+                        Participante objNuevoParticipante = new Participante();
+
+                        // Consulta para obtener el resto de datos del participante con el código de usuario
+                        cmd = new MySqlCommand("SELECT * FROM Participantes WHERE codigoInvitacion = @codigoInvitacion", conn);
+                        cmd.Parameters.AddWithValue("@codigoInvitacion", obj_participante.codigo);
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read()) // Si se encuentra el participante
+                            {
+                                //int idNuevoParticipante = reader.GetString("id")
+                                objNuevoParticipante.nombre = reader.IsDBNull(reader.GetOrdinal("nombre")) ? null : reader.GetString("nombre");
+                                objNuevoParticipante.contrasena = reader.IsDBNull(reader.GetOrdinal("contrasena")) ? null : reader.GetString("contrasena");
+                                objNuevoParticipante.disfraz = reader.IsDBNull(reader.GetOrdinal("disfraz")) ? null : reader.GetString("disfraz");
+                                objNuevoParticipante.fotoDisfraz = reader.IsDBNull(reader.GetOrdinal("fotoDisfraz")) ? null : reader.GetString("fotoDisfraz");
+                                objNuevoParticipante.codigo = obj_participante.codigo;
+                            }
+                        }
+
+                        // Si alguno de los campos es NULL, actualizar con los valores ingresados por el usuario
+                        if (string.IsNullOrEmpty(objNuevoParticipante.nombre) || string.IsNullOrEmpty(objNuevoParticipante.contrasena) || string.IsNullOrEmpty(objNuevoParticipante.disfraz))
+                        {
+                            // Crear string de query a la base de datos
+                            string updateQuery = "UPDATE Participantes SET " +
+                                                 (string.IsNullOrEmpty(objNuevoParticipante.nombre) ? "nombre = @nombre, " : "") +
+                                                 (string.IsNullOrEmpty(objNuevoParticipante.contrasena) ? "contrasena = @contrasena, " : "") +
+                                                 (string.IsNullOrEmpty(objNuevoParticipante.disfraz) ? "disfraz = @disfraz, fotoDisfraz = @fotoDisfraz " : "") +
+                                                 "WHERE codigoInvitacion = @codigoInvitacion";
+
+                            // Reutilizar el comando para la actualización
+                            cmd = new MySqlCommand(updateQuery, conn);
+                            if (string.IsNullOrEmpty(objNuevoParticipante.nombre)) cmd.Parameters.AddWithValue("@nombre", obj_participante.nombre);
+                            if (string.IsNullOrEmpty(objNuevoParticipante.contrasena)) cmd.Parameters.AddWithValue("@contrasena", obj_participante.contrasena);
+                            if (string.IsNullOrEmpty(objNuevoParticipante.disfraz))
+                            {
+                                cmd.Parameters.AddWithValue("@disfraz", obj_participante.disfraz);
+                                cmd.Parameters.AddWithValue("@fotoDisfraz", obj_participante.fotoDisfraz);
+                            }
+                            cmd.Parameters.AddWithValue("@codigoInvitacion", obj_participante.codigo);
+
+                            // Ejecutar la actualización
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Usuario actualizado exitosamente.");
+                            FormActividad formActividad = new FormActividad();
+                            this.Hide();
+                            formActividad.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Este código de invitación ya ha sido usado.");
+                        }
+                    }
+
                     conn.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error en la lectura de los codigos de invitado: " + ex);
-                }
-                if(codigosInvitacion.Contains(obj_participante.codigo))
-                {
-                    Participante objNuevoParticipante = new Participante();
-                    try
-                    {
-                        conn.Open();
-                        //consulta para obtener el resto de datos del participante con el codigo de usuario
-                        MySqlCommand cmd = new MySqlCommand("SELECT * FROM Participantes WHERE codigoInvitacion = @codigoInvitacion");
-                        cmd.Parameters.AddWithValue("@codigoInvitacion", obj_participante.codigo);
-                        using(MySqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read()) // Si se encuentra el participante
-                            {
-                                objNuevoParticipante.nombre = reader.IsDBNull(0) ? null : reader.GetString("nombre");
-                                objNuevoParticipante.contrasena = reader.IsDBNull(1) ? null : reader.GetString("contrasena");
-                                objNuevoParticipante.disfraz = reader.IsDBNull(2) ? null : reader.GetString("disfraz");
-                                objNuevoParticipante.fotoDisfraz = reader.IsDBNull(3) ? null : reader.GetString("fotoDisfraz");
-                                objNuevoParticipante.codigo = obj_participante.codigo;
-                                reader.Close();
-
-                                // Si alguno de los campos es NULL, actualizar con los valores ingresados por el usuario
-                                if (string.IsNullOrEmpty(objNuevoParticipante.nombre) || string.IsNullOrEmpty(objNuevoParticipante.contrasena) || string.IsNullOrEmpty(objNuevoParticipante.disfraz))
-                                {
-                                    //Crear string de query a la base de datos
-                                    string updateQuery = "UPDATE Participantes SET " +
-                                                         (string.IsNullOrEmpty(objNuevoParticipante.nombre) ? "nombre = @nombre, " : "") +
-                                                         (string.IsNullOrEmpty(objNuevoParticipante.contrasena) ? "contrasena = @contrasena, " : "") +
-                                                         (string.IsNullOrEmpty(objNuevoParticipante.disfraz) ? "disfraz = @disfraz, fotoDisfraz = @fotoDisfraz " : "") +
-                                                         "WHERE codigoInvitacion = @codigoInvitacion";
-
-                                    cmd = new MySqlCommand(updateQuery, conn);
-                                    //pasar parametros al query
-                                    if (string.IsNullOrEmpty(objNuevoParticipante.nombre)) cmd.Parameters.AddWithValue("@nombre", obj_participante.nombre);
-                                    if (string.IsNullOrEmpty(objNuevoParticipante.contrasena)) cmd.Parameters.AddWithValue("@contrasena", obj_participante.contrasena);
-                                    if (string.IsNullOrEmpty(objNuevoParticipante.disfraz))
-                                    {
-                                        cmd.Parameters.AddWithValue("@disfraz", obj_participante.disfraz);
-                                        cmd.Parameters.AddWithValue("@fotoDisfraz", obj_participante.fotoDisfraz);
-                                    }
-                                    cmd.Parameters.AddWithValue("@codigoInvitacion", obj_participante.codigo);
-
-                                    // Ejecutar la actualización
-                                    cmd.ExecuteNonQuery();
-                                    MessageBox.Show("Usuario creado exitosamente.");
-                                    //Abrir la ventana para la seleccion de la actividad que el usuario desee realizar
-                                }
-                                //Si alguno de los campos tiene datos, el codigo de invitacion se considerara usado y no se podra registrar el nuevo usuario
-                                else
-                                {
-                                    MessageBox.Show("Este codigo de Invitacion ya ha sido usado");
-                                }
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error en la lectura del participante: " + ex);
-                    }
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
         }

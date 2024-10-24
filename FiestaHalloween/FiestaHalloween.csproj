@@ -140,6 +140,7 @@
     <Compile Include="ParadasForm.Designer.cs">
       <DependentUpon>ParadasForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Participante.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminForm.resx">
