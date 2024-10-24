@@ -134,6 +134,12 @@
     <Compile Include="FormCliente.Designer.cs">
       <DependentUpon>FormCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ParadasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParadasForm.Designer.cs">
+      <DependentUpon>ParadasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminForm.resx">
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParadasForm.resx">
+      <DependentUpon>ParadasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -210,6 +219,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\murcielagos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brujitasi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brujitasi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catoween.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catoween1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catoween2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cathallowee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumbas %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\589f098c64b351149f22a8a7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barriada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terreno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa2_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\esta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
