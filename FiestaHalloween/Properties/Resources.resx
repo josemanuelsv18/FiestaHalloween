@@ -130,8 +130,20 @@
   <data name="589f098c64b351149f22a8a7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\589f098c64b351149f22a8a7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dulces" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dulces.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="spider" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="casa3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\casa3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="terreno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\terreno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="toallin-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\toallin-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="halloween" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\halloween.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -153,6 +165,9 @@
   </data>
   <data name="murcielagos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\murcielagos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="galley" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\galley.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="brujitasi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brujitasi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,6 +193,9 @@
   <data name="locker" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\locker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="actividad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\actividad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="casa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\casa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -190,16 +208,16 @@
   <data name="casa2_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\casa2_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="terreno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\terreno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="esta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\esta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="casa5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\casa5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="galley" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\galley.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="casa4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\casa4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="esta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\esta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="candybag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\candybag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

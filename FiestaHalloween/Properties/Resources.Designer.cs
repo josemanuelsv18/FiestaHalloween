@@ -73,6 +73,16 @@ namespace FiestaHalloween.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap actividad {
+            get {
+                object obj = ResourceManager.GetObject("actividad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap barriada {
             get {
                 object obj = ResourceManager.GetObject("barriada", resourceCulture);
@@ -113,6 +123,16 @@ namespace FiestaHalloween.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap candybag {
+            get {
+                object obj = ResourceManager.GetObject("candybag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap casa {
             get {
                 object obj = ResourceManager.GetObject("casa", resourceCulture);
@@ -136,6 +156,26 @@ namespace FiestaHalloween.Properties {
         internal static System.Drawing.Bitmap casa2_1 {
             get {
                 object obj = ResourceManager.GetObject("casa2_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap casa3 {
+            get {
+                object obj = ResourceManager.GetObject("casa3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap casa4 {
+            get {
+                object obj = ResourceManager.GetObject("casa4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +226,16 @@ namespace FiestaHalloween.Properties {
         internal static System.Drawing.Bitmap catoween2 {
             get {
                 object obj = ResourceManager.GetObject("catoween2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dulces {
+            get {
+                object obj = ResourceManager.GetObject("dulces", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +356,16 @@ namespace FiestaHalloween.Properties {
         internal static System.Drawing.Bitmap terreno {
             get {
                 object obj = ResourceManager.GetObject("terreno", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toallin_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("toallin-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
