@@ -73,6 +73,16 @@ namespace FiestaHalloween.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barriada {
+            get {
+                object obj = ResourceManager.GetObject("barriada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bruja {
             get {
                 object obj = ResourceManager.GetObject("bruja", resourceCulture);
@@ -96,6 +106,46 @@ namespace FiestaHalloween.Properties {
         internal static System.Drawing.Bitmap brujitasi1 {
             get {
                 object obj = ResourceManager.GetObject("brujitasi1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap casa {
+            get {
+                object obj = ResourceManager.GetObject("casa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap casa1 {
+            get {
+                object obj = ResourceManager.GetObject("casa1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap casa2_1 {
+            get {
+                object obj = ResourceManager.GetObject("casa2_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap casa5 {
+            get {
+                object obj = ResourceManager.GetObject("casa5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +193,16 @@ namespace FiestaHalloween.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap esta {
+            get {
+                object obj = ResourceManager.GetObject("esta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap galley {
             get {
                 object obj = ResourceManager.GetObject("galley", resourceCulture);
@@ -166,6 +226,16 @@ namespace FiestaHalloween.Properties {
         internal static System.Drawing.Bitmap halloween {
             get {
                 object obj = ResourceManager.GetObject("halloween", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap house1 {
+            get {
+                object obj = ResourceManager.GetObject("house1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +296,16 @@ namespace FiestaHalloween.Properties {
         internal static System.Drawing.Bitmap squeletons {
             get {
                 object obj = ResourceManager.GetObject("squeletons", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap terreno {
+            get {
+                object obj = ResourceManager.GetObject("terreno", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

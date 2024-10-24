@@ -100,6 +100,36 @@ namespace FiestaHalloween
             form.Show();
         }
 
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidadDulce_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxTipoDulce_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarDulces_Click(object sender, EventArgs e)
+        {
+
+        }
+
         // Método para generar una cadena aleatoria
         static string GenerateRandomString(int length)
         {
