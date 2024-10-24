@@ -63,7 +63,7 @@ namespace FiestaHalloween
                     conn.Open();
 
                     // Crear el comando para verificar el nombre y la contraseña
-                    string query = "SELECT id FROM Participantes WHERE nombre = @nombre AND contrasena = @contrasena";
+                    string query = "SELECT idParticipante FROM Participantes WHERE nombre = @nombre AND contrasena = @contrasena";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
                     // Agregar parámetros para evitar inyecciones SQL
@@ -76,18 +76,14 @@ namespace FiestaHalloween
                         if (reader.Read())
                         {
                             // Si se encuentra un usuario, obtener su ID
-                            idUsuario = reader.GetInt32("id");
+                            idUsuario = reader.GetInt32("idParticipante");
                         }
                     }
 
                     // Verificar si se encontró un usuario con el nombre y contraseña ingresados
                     if (idUsuario != -1)
                     {
-                        // Inicio de sesión exitoso, puedes usar el ID del usuario
-                        MessageBox.Show("Inicio de sesión exitoso. ID de usuario: " + idUsuario);
-
-                        // Aquí puedes redirigir al usuario a la siguiente pantalla o guardar el ID
-                        // Ejemplo:
+                        
                         FormActividad formActividad = new FormActividad(idUsuario); // Si pasas el ID a otra pantalla
                         formActividad.Show();
                         this.Hide(); // Ocultar la pantalla de inicio de sesión

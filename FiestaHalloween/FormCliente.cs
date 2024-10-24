@@ -57,6 +57,8 @@ namespace FiestaHalloween
             // Crear conexión con el servidor
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
+                //definir un id inexistente para instanciar el id del nuevo usuario
+                int idNuevoParticipante = -1;
                 try
                 {
                     conn.Open();
@@ -84,7 +86,7 @@ namespace FiestaHalloween
                         {
                             if (reader.Read()) // Si se encuentra el participante
                             {
-                                //int idNuevoParticipante = reader.GetString("id")
+                                idNuevoParticipante = reader.GetInt32("idParticipante");
                                 objNuevoParticipante.nombre = reader.IsDBNull(reader.GetOrdinal("nombre")) ? null : reader.GetString("nombre");
                                 objNuevoParticipante.contrasena = reader.IsDBNull(reader.GetOrdinal("contrasena")) ? null : reader.GetString("contrasena");
                                 objNuevoParticipante.disfraz = reader.IsDBNull(reader.GetOrdinal("disfraz")) ? null : reader.GetString("disfraz");
@@ -117,7 +119,7 @@ namespace FiestaHalloween
                             // Ejecutar la actualización
                             cmd.ExecuteNonQuery();
                             MessageBox.Show("Usuario actualizado exitosamente.");
-                            FormActividad formActividad = new FormActividad();
+                            FormActividad formActividad = new FormActividad(idNuevoParticipante);
                             this.Hide();
                             formActividad.Show();
                         }

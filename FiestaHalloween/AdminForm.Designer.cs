@@ -52,11 +52,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtNombreFamilia = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtNombreFamilia = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidadCodigos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidadDulce)).BeginInit();
             this.panel1.SuspendLayout();
@@ -146,6 +146,7 @@
             this.btnRegistrarDisfraz.TabIndex = 6;
             this.btnRegistrarDisfraz.Text = "Registrar";
             this.btnRegistrarDisfraz.UseVisualStyleBackColor = false;
+            this.btnRegistrarDisfraz.Click += new System.EventHandler(this.btnRegistrarDisfraz_Click);
             // 
             // label3
             // 
@@ -189,7 +190,6 @@
             this.cbxTipoDulce.Name = "cbxTipoDulce";
             this.cbxTipoDulce.Size = new System.Drawing.Size(121, 24);
             this.cbxTipoDulce.TabIndex = 10;
-            this.cbxTipoDulce.SelectedIndexChanged += new System.EventHandler(this.cbxTipoDulce_SelectedIndexChanged);
             // 
             // txtCantidadDulce
             // 
@@ -198,7 +198,6 @@
             this.txtCantidadDulce.Name = "txtCantidadDulce";
             this.txtCantidadDulce.Size = new System.Drawing.Size(121, 22);
             this.txtCantidadDulce.TabIndex = 11;
-            this.txtCantidadDulce.ValueChanged += new System.EventHandler(this.txtCantidadDulce_ValueChanged);
             // 
             // label4
             // 
@@ -209,7 +208,6 @@
             this.label4.Size = new System.Drawing.Size(107, 16);
             this.label4.TabIndex = 12;
             this.label4.Text = "Tipo de dulce:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -234,7 +232,6 @@
             this.btnAgregarDulces.TabIndex = 14;
             this.btnAgregarDulces.Text = "Agregar dulces";
             this.btnAgregarDulces.UseVisualStyleBackColor = false;
-            this.btnAgregarDulces.Click += new System.EventHandler(this.btnAgregarDulces_Click);
             // 
             // label6
             // 
@@ -353,6 +350,23 @@
             this.panel2.Size = new System.Drawing.Size(450, 447);
             this.panel2.TabIndex = 20;
             // 
+            // txtNombreFamilia
+            // 
+            this.txtNombreFamilia.Location = new System.Drawing.Point(40, 90);
+            this.txtNombreFamilia.Name = "txtNombreFamilia";
+            this.txtNombreFamilia.Size = new System.Drawing.Size(143, 22);
+            this.txtNombreFamilia.TabIndex = 19;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(33, 60);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(160, 16);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Nombre de la Familia:";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::FiestaHalloween.Properties.Resources._589f098c64b351149f22a8a7;
@@ -362,7 +376,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox5
             // 
@@ -383,24 +396,6 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 15;
             this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(33, 60);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 16);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Nombre de la Familia:";
-            // 
-            // txtNombreFamilia
-            // 
-            this.txtNombreFamilia.Location = new System.Drawing.Point(40, 90);
-            this.txtNombreFamilia.Name = "txtNombreFamilia";
-            this.txtNombreFamilia.Size = new System.Drawing.Size(143, 22);
-            this.txtNombreFamilia.TabIndex = 19;
             // 
             // AdminForm
             // 
