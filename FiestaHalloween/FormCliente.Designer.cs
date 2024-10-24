@@ -33,14 +33,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tbxNombre = new System.Windows.Forms.TextBox();
-            this.tbxCodigoInvitacion = new System.Windows.Forms.TextBox();
-            this.tbxContraseña = new System.Windows.Forms.TextBox();
-            this.tbxDisfraz = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCargarImagen = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCodigoInvitacion = new System.Windows.Forms.TextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtDisfraz = new System.Windows.Forms.TextBox();
+            this.pbxDisfraz = new System.Windows.Forms.PictureBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -48,10 +50,11 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDisfraz)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -59,17 +62,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 85);
+            this.label1.Location = new System.Drawing.Point(48, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 16);
+            this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
@@ -77,9 +79,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(64, 146);
+            this.label2.Location = new System.Drawing.Point(48, 119);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 16);
+            this.label2.Size = new System.Drawing.Size(127, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Código de invitación:";
             // 
@@ -87,9 +90,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(64, 225);
+            this.label3.Location = new System.Drawing.Point(48, 183);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 16);
+            this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Contraseña:";
             // 
@@ -97,9 +101,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Old English Text MT", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(118, 21);
+            this.label4.Location = new System.Drawing.Point(88, 17);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(204, 32);
+            this.label4.Size = new System.Drawing.Size(156, 27);
             this.label4.TabIndex = 3;
             this.label4.Text = "Registro cliente";
             // 
@@ -107,56 +112,64 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(64, 299);
+            this.label5.Location = new System.Drawing.Point(48, 243);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 16);
+            this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Disfraz:";
             // 
-            // button1
+            // btnCargarImagen
             // 
-            this.button1.Location = new System.Drawing.Point(292, 65);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 47);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Cargar foto del disfraz";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCargarImagen.Location = new System.Drawing.Point(219, 53);
+            this.btnCargarImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCargarImagen.Name = "btnCargarImagen";
+            this.btnCargarImagen.Size = new System.Drawing.Size(94, 38);
+            this.btnCargarImagen.TabIndex = 5;
+            this.btnCargarImagen.Text = "Cargar foto del disfraz";
+            this.btnCargarImagen.UseVisualStyleBackColor = true;
+            this.btnCargarImagen.Click += new System.EventHandler(this.btnCargarImagen_Click);
             // 
-            // tbxNombre
+            // txtNombre
             // 
-            this.tbxNombre.Location = new System.Drawing.Point(67, 104);
-            this.tbxNombre.Name = "tbxNombre";
-            this.tbxNombre.Size = new System.Drawing.Size(129, 22);
-            this.tbxNombre.TabIndex = 6;
+            this.txtNombre.Location = new System.Drawing.Point(50, 84);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(98, 20);
+            this.txtNombre.TabIndex = 6;
             // 
-            // tbxCodigoInvitacion
+            // txtCodigoInvitacion
             // 
-            this.tbxCodigoInvitacion.Location = new System.Drawing.Point(67, 175);
-            this.tbxCodigoInvitacion.Name = "tbxCodigoInvitacion";
-            this.tbxCodigoInvitacion.Size = new System.Drawing.Size(129, 22);
-            this.tbxCodigoInvitacion.TabIndex = 7;
+            this.txtCodigoInvitacion.Location = new System.Drawing.Point(50, 142);
+            this.txtCodigoInvitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoInvitacion.Name = "txtCodigoInvitacion";
+            this.txtCodigoInvitacion.Size = new System.Drawing.Size(98, 20);
+            this.txtCodigoInvitacion.TabIndex = 7;
             // 
-            // tbxContraseña
+            // txtContraseña
             // 
-            this.tbxContraseña.Location = new System.Drawing.Point(67, 244);
-            this.tbxContraseña.Name = "tbxContraseña";
-            this.tbxContraseña.Size = new System.Drawing.Size(129, 22);
-            this.tbxContraseña.TabIndex = 8;
+            this.txtContraseña.Location = new System.Drawing.Point(50, 198);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(98, 20);
+            this.txtContraseña.TabIndex = 8;
             // 
-            // tbxDisfraz
+            // txtDisfraz
             // 
-            this.tbxDisfraz.Location = new System.Drawing.Point(67, 318);
-            this.tbxDisfraz.Name = "tbxDisfraz";
-            this.tbxDisfraz.Size = new System.Drawing.Size(129, 22);
-            this.tbxDisfraz.TabIndex = 9;
+            this.txtDisfraz.Location = new System.Drawing.Point(50, 258);
+            this.txtDisfraz.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDisfraz.Name = "txtDisfraz";
+            this.txtDisfraz.Size = new System.Drawing.Size(98, 20);
+            this.txtDisfraz.TabIndex = 9;
             // 
-            // pictureBox1
+            // pbxDisfraz
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(248, 132);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 179);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.pbxDisfraz.Location = new System.Drawing.Point(186, 107);
+            this.pbxDisfraz.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbxDisfraz.Name = "pbxDisfraz";
+            this.pbxDisfraz.Size = new System.Drawing.Size(129, 145);
+            this.pbxDisfraz.TabIndex = 10;
+            this.pbxDisfraz.TabStop = false;
             // 
             // btnRegistrar
             // 
@@ -165,47 +178,73 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Old English Text MT", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrar.Location = new System.Drawing.Point(179, 362);
+            this.btnRegistrar.Location = new System.Drawing.Point(134, 294);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(112, 33);
+            this.btnRegistrar.Size = new System.Drawing.Size(84, 27);
             this.btnRegistrar.TabIndex = 11;
             this.btnRegistrar.Text = "Registar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox9);
             this.panel1.Controls.Add(this.pictureBox10);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.tbxNombre);
+            this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btnRegistrar);
-            this.panel1.Controls.Add(this.tbxDisfraz);
+            this.panel1.Controls.Add(this.txtDisfraz);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.tbxContraseña);
+            this.panel1.Controls.Add(this.txtContraseña);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.tbxCodigoInvitacion);
+            this.panel1.Controls.Add(this.txtCodigoInvitacion);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.pbxDisfraz);
+            this.panel1.Controls.Add(this.btnCargarImagen);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Controls.Add(this.pictureBox7);
-            this.panel1.Location = new System.Drawing.Point(122, 47);
+            this.panel1.Location = new System.Drawing.Point(92, 38);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(475, 415);
+            this.panel1.Size = new System.Drawing.Size(356, 337);
             this.panel1.TabIndex = 12;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::FiestaHalloween.Properties.Resources.squeletons;
+            this.pictureBox9.Location = new System.Drawing.Point(15, 284);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(115, 51);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 25;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::FiestaHalloween.Properties.Resources.squeletons;
+            this.pictureBox10.Location = new System.Drawing.Point(223, 284);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(115, 51);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 24;
+            this.pictureBox10.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::FiestaHalloween.Properties.Resources.icono;
-            this.pictureBox2.Location = new System.Drawing.Point(20, 85);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 69);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 42);
+            this.pictureBox2.Size = new System.Drawing.Size(28, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
@@ -213,9 +252,10 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::FiestaHalloween.Properties.Resources.ghosts;
-            this.pictureBox5.Location = new System.Drawing.Point(20, 299);
+            this.pictureBox5.Location = new System.Drawing.Point(15, 243);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(38, 42);
+            this.pictureBox5.Size = new System.Drawing.Size(28, 34);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 18;
             this.pictureBox5.TabStop = false;
@@ -223,9 +263,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::FiestaHalloween.Properties.Resources.locker;
-            this.pictureBox3.Location = new System.Drawing.Point(20, 224);
+            this.pictureBox3.Location = new System.Drawing.Point(15, 182);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(38, 42);
+            this.pictureBox3.Size = new System.Drawing.Size(28, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 16;
             this.pictureBox3.TabStop = false;
@@ -233,9 +274,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::FiestaHalloween.Properties.Resources.what;
-            this.pictureBox4.Location = new System.Drawing.Point(20, 147);
+            this.pictureBox4.Location = new System.Drawing.Point(15, 119);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(38, 42);
+            this.pictureBox4.Size = new System.Drawing.Size(28, 34);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
@@ -243,9 +285,10 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::FiestaHalloween.Properties.Resources.galley;
-            this.pictureBox6.Location = new System.Drawing.Point(248, 70);
+            this.pictureBox6.Location = new System.Drawing.Point(186, 57);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(38, 42);
+            this.pictureBox6.Size = new System.Drawing.Size(28, 34);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;
@@ -253,9 +296,10 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::FiestaHalloween.Properties.Resources.spider;
-            this.pictureBox8.Location = new System.Drawing.Point(-43, -19);
+            this.pictureBox8.Location = new System.Drawing.Point(-32, -15);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(262, 241);
+            this.pictureBox8.Size = new System.Drawing.Size(196, 196);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 21;
             this.pictureBox8.TabStop = false;
@@ -263,47 +307,35 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::FiestaHalloween.Properties.Resources.spiderr__1_;
-            this.pictureBox7.Location = new System.Drawing.Point(328, -27);
+            this.pictureBox7.Location = new System.Drawing.Point(246, -22);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(253, 268);
+            this.pictureBox7.Size = new System.Drawing.Size(190, 218);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 22;
             this.pictureBox7.TabStop = false;
             // 
-            // pictureBox10
+            // openFileDialog1
             // 
-            this.pictureBox10.Image = global::FiestaHalloween.Properties.Resources.squeletons;
-            this.pictureBox10.Location = new System.Drawing.Point(297, 349);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(153, 63);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 24;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::FiestaHalloween.Properties.Resources.squeletons;
-            this.pictureBox9.Location = new System.Drawing.Point(20, 349);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(153, 63);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 25;
-            this.pictureBox9.TabStop = false;
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // FormCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FiestaHalloween.Properties.Resources.halloween;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(719, 579);
+            this.ClientSize = new System.Drawing.Size(539, 470);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormCliente";
             this.Text = "FormCliente";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDisfraz)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -311,8 +343,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,12 +354,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox tbxNombre;
-        private System.Windows.Forms.TextBox tbxCodigoInvitacion;
-        private System.Windows.Forms.TextBox tbxContraseña;
-        private System.Windows.Forms.TextBox tbxDisfraz;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnCargarImagen;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCodigoInvitacion;
+        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox txtDisfraz;
+        private System.Windows.Forms.PictureBox pbxDisfraz;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -341,5 +371,6 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
