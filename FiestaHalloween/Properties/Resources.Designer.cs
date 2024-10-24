@@ -63,6 +63,16 @@ namespace FiestaHalloween.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _589f098c64b351149f22a8a7 {
+            get {
+                object obj = ResourceManager.GetObject("589f098c64b351149f22a8a7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bruja {
             get {
                 object obj = ResourceManager.GetObject("bruja", resourceCulture);
@@ -86,6 +96,46 @@ namespace FiestaHalloween.Properties {
         internal static System.Drawing.Bitmap brujitasi1 {
             get {
                 object obj = ResourceManager.GetObject("brujitasi1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cathallowee {
+            get {
+                object obj = ResourceManager.GetObject("cathallowee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap catoween {
+            get {
+                object obj = ResourceManager.GetObject("catoween", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap catoween1 {
+            get {
+                object obj = ResourceManager.GetObject("catoween1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap catoween2 {
+            get {
+                object obj = ResourceManager.GetObject("catoween2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +236,16 @@ namespace FiestaHalloween.Properties {
         internal static System.Drawing.Bitmap tumbas {
             get {
                 object obj = ResourceManager.GetObject("tumbas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tumbas__1_ {
+            get {
+                object obj = ResourceManager.GetObject("tumbas (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
