@@ -22,6 +22,33 @@ namespace FiestaHalloween
             this.nombre = nombre;
             this.contrasena = contrasena;
             connectionString = "server=localhost;database=FiestaHalloween;uid=" + nombre + ";pwd=" + contrasena + ";";
+            //Cargar y mostrar todos los invitados a la fiesta en el listbox para registrar a concurso de disfraz
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    //Lista para almacenar a todos los invitados
+                    List<string> invitados = new List<string>();
+
+                    conn.Open();
+                    //Consulta para obtener a todos los invitados registrados
+                    MySqlCommand cmd = new MySqlCommand("SELECT nombre FROM Participantes WHERE nombre IS NOT NULL", conn);
+                    using(MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        //Mientras se pueda leer agregar nombres a la lista de invitados
+                        while (reader.Read())
+                        {
+                            invitados.Add(reader.GetString("nombre"));
+                        }
+                    }
+                    conn.Close();
+                    //Escribir la lista de invitados en el listbox correspondiente
+                    llenarListBox(invitados, lbxInivitadosFiesta);
+                }catch(Exception ex)
+                {
+                    MessageBox.Show("Error en la lectura de la lista de invitados: " + ex.Message);
+                }
+            }
         }
 
         private void btnGenerarCodigo_Click(object sender, EventArgs e)
@@ -103,7 +130,39 @@ namespace FiestaHalloween
 
         private void btnRegistrarDisfraz_Click(object sender, EventArgs e)
         {
+            //modificar la tabla participantes a true en concursoDisfraz
+            
+            //verificar que el usuario haya seleccionado un invitado
+            if (lbxInivitadosFiesta.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, selecciona un participante.");
+                return;
+            }
+            // Obtener el nombre seleccionado
+            string nombreSeleccionado = lbxInivitadosFiesta.SelectedItem.ToString();
+            string updateQuery = "UPDATE Participantes SET concursoDisfraz = 1 WHERE nombre = @nombre";
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(updateQuery, conn);
+                    cmd.Parameters.AddWithValue("@nombre", nombreSeleccionado);
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("El participante ha sido registrado en el concurso de disfraces.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al registrar el participante en el concurso.");
+                    }
 
+                }catch (Exception ex)
+                {
+                    MessageBox.Show("Error en la actualizacion del participante: "+ex.Message);
+                }
+            }
         }
 
         // Método para generar una cadena aleatoria
